@@ -92,6 +92,11 @@ e2_2025_11_30 = Compound({
     })
 
 
+# TODO: Try above with lower musk percentage.
+# Musk seems to be less volatile and so the smell becomes overly musky after a while.
+# TODO: Try more BP
+# TODO: Try Habanolide instead of Musk for safety concerns.
+
 def main():
     chemicals, solvent = industrial(e2_2025_11_30.decompose())
     print("name,cas,percent")
