@@ -97,8 +97,16 @@ e2_2025_11_30 = Compound({
 # TODO: Try more BP
 # TODO: Try Habanolide instead of Musk for safety concerns.
 
+habanolide = Raw(Chemical("habanolide", "111879-80-2"), 7.99)
+
+e3_2025_12_16 = Compound({
+                         e1_2025_11_30: 900,
+                         habanolide: 200,
+                         musk: 100
+})
+
 def main():
-    chemicals, solvent = industrial(e2_2025_11_30.decompose())
+    chemicals, solvent = industrial(e3_2025_12_16.decompose())
     print("name,cas,percent")
     for chemical, percent in chemicals.items():
         print(f"{chemical.name},{chemical.cas},{percent * 100:.4f}")
